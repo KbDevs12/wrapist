@@ -1,13 +1,7 @@
 "use client";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "../ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import { useRef } from "react";
 
 export function HeroCarousel() {

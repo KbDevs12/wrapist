@@ -6,12 +6,9 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  type CarouselApi,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { useState } from "react";
-
 const reviews = [
   {
     name: "Sarah Johnson",
@@ -51,12 +48,9 @@ const reviews = [
 ];
 
 export default function Review() {
-  const [api, setApi] = useState<CarouselApi | null>(null);
-
   return (
     <div className="relative max-w-xl mx-auto">
       <Carousel
-        setApi={setApi}
         opts={{
           align: "start",
           loop: true,
@@ -72,7 +66,7 @@ export default function Review() {
                     <AvatarImage src={r.avatar} alt={r.name} />
                     <AvatarFallback>{r.name[0]}</AvatarFallback>
                   </Avatar>
-                  <p className="text-gray-600 italic">"{r.review}"</p>
+                  <p className="text-gray-600 italic">&quot;{r.review}&quot;</p>
                   <div>
                     <p className="font-semibold">{r.name}</p>
                     <p className="text-sm text-gray-500">{r.role}</p>
