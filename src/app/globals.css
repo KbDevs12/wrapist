@@ -2,26 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* Light mode */
+    --background: 57 100% 91%; /* Cream (#FFFDD0) */
+    --foreground: 0 0% 0%; /* Hitam */
+    --card: 57 100% 91%; /* Cream */
+    --card-foreground: 0 0% 0%;
+    --popover: 57 100% 91%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 96 14% 62%; /* Sage Green (#9CAF88) */
+    --primary-foreground: 0 0% 100%; /* Putih */
+    --secondary: 342 28% 73%; /* Dusty Rose (#D8A7B1) */
+    --secondary-foreground: 0 0% 100%; /* Putih */
+    --muted: 57 24% 88%;
+    --muted-foreground: 0 0% 37%;
+    --accent: 342 28% 73%; /* Dusty Rose */
+    --accent-foreground: 0 0% 100%; /* Putih */
+    --destructive: 0 63% 54%; /* Merah soft */
+    --destructive-foreground: 0 0% 100%;
+    --border: 57 24% 78%;
+    --input: 57 24% 78%;
+    --ring: 96 14% 62%; /* Sage Green */
+    --chart-1: 96 14% 62%; /* Sage Green */
+    --chart-2: 342 28% 73%; /* Dusty Rose */
+    --chart-3: 57 100% 91%; /* Cream */
+    --chart-4: 0 0% 0%; /* Hitam */
+    --chart-5: 0 0% 100%; /* Putih */
+    --radius: 0.5rem;
+  }
+  .dark {
+    /* Dark mode */
+    --background: 0 0% 0%; /* Hitam */
+    --foreground: 0 0% 100%; /* Putih */
+    --card: 0 0% 10%;
+    --card-foreground: 57 100% 91%; /* Cream */
+    --popover: 0 0% 10%;
+    --popover-foreground: 57 100% 91%;
+    --primary: 96 14% 62%; /* Sage Green */
+    --primary-foreground: 0 0% 0%; /* Hitam */
+    --secondary: 342 28% 73%; /* Dusty Rose */
+    --secondary-foreground: 0 0% 0%; /* Hitam */
+    --muted: 0 0% 16%;
+    --muted-foreground: 57 24% 78%;
+    --accent: 342 28% 73%; /* Dusty Rose */
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 63% 54%;
+    --destructive-foreground: 0 0% 0%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 96 14% 62%;
+    --chart-1: 96 14% 62%;
+    --chart-2: 342 28% 73%;
+    --chart-3: 57 100% 91%;
+    --chart-4: 0 0% 100%;
+    --chart-5: 0 0% 0%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
